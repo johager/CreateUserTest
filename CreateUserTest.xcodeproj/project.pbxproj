@@ -13,6 +13,7 @@
 		F805E02728610888000B2BDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F805E02528610888000B2BDC /* Main.storyboard */; };
 		F805E0292861088A000B2BDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F805E0282861088A000B2BDC /* Assets.xcassets */; };
 		F805E02C2861088A000B2BDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F805E02A2861088A000B2BDC /* LaunchScreen.storyboard */; };
+		F805E034286108B6000B2BDC /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F805E033286108B6000B2BDC /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F805E0282861088A000B2BDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F805E02B2861088A000B2BDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F805E02D2861088A000B2BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F805E033286108B6000B2BDC /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				F805E01F28610888000B2BDC /* AppDelegate.swift */,
 				F805E02128610888000B2BDC /* SceneDelegate.swift */,
+				F805E033286108B6000B2BDC /* UIView+.swift */,
 				F805E02328610888000B2BDC /* ViewController.swift */,
 				F805E02528610888000B2BDC /* Main.storyboard */,
 				F805E0282861088A000B2BDC /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F805E034286108B6000B2BDC /* UIView+.swift in Sources */,
 				F805E02428610888000B2BDC /* ViewController.swift in Sources */,
 				F805E02028610888000B2BDC /* AppDelegate.swift in Sources */,
 				F805E02228610888000B2BDC /* SceneDelegate.swift in Sources */,
