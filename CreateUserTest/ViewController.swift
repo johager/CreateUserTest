@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let useGoodEmailCheck = false
+    
     // MARK: - Views
     
     var usernameTextField: UITextField!
@@ -29,7 +31,7 @@ class ViewController: UIViewController {
         
         let safeArea = view.safeAreaLayoutGuide
         
-        usernameTextField = textField(placeholder: "username")
+        usernameTextField = textField(placeholder: "username (email)")
         view.addSubview(usernameTextField)
         usernameTextField.pin(top: nil, trailing: safeArea.trailingAnchor, bottom: nil, leading: safeArea.leadingAnchor, margin: [0, 16, 0, 16])
         let usernameTopConstraint = NSLayoutConstraint(item: usernameTextField!, attribute: .top, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 0.3, constant: 0)
@@ -73,8 +75,15 @@ class ViewController: UIViewController {
     
     // MARK: - Methods
     
-    func usernameIsOK(_ username: String) -> Bool {
-        return username.contains("@") && username.hasSuffix(".com")
+    func usernameIsOK(_ username: String, useGoodEmailCheck: Bool) -> Bool {
+        if useGoodEmailCheck {
+            let regex = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
+            let test = NSPredicate(format:"SELF MATCHES %@", regex)
+            return test.evaluate(with: username)
+            
+        } else {
+            return username.contains("@") && username.hasSuffix(".com")
+        }
     }
     
     func passwdIsOK(_ passwd: String) -> Bool {
@@ -86,7 +95,7 @@ class ViewController: UIViewController {
         let testCap = NSPredicate(format:"SELF MATCHES %@", capitalLetterRegEx)
         guard testCap.evaluate(with: passwd) else { return false }
         
-        let numberRegEx = ".*[0-9]+.*"
+        let numberRegEx = ".*[0-9]+.*[0-9]+.*"
         let testNum = NSPredicate(format:"SELF MATCHES %@", numberRegEx)
         guard testNum.evaluate(with: passwd) else { return false }
         
@@ -109,7 +118,7 @@ class ViewController: UIViewController {
         
         var messageText = ""
         
-        if !usernameIsOK(username) {
+        if !usernameIsOK(username, useGoodEmailCheck: useGoodEmailCheck) {
             messageText = "Your username must be a valid email address (have an '@' in the middle and ends with '.com'."
         }
         
