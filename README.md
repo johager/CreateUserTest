@@ -10,7 +10,11 @@ The build-1 commit was completed within the allowed 30 minutes, but the password
 
 Also, the "email" check is not a very good email check, but it was what the client wanted.
 
-The build-2 commit was completed later, and includes an optional, proper email check and unit tests to evaluate the username and passwrd "validators."
+The build-2 commit was completed later, and includes:
+- a correct password check (two numbers)
+- an optional, proper email check
+- unit tests to evaluate the username and passwrd "validators"
+- README file
 
 ## Initial Problem Statement
 
