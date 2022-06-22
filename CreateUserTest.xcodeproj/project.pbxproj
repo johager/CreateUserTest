@@ -14,8 +14,8 @@
 		F805E0292861088A000B2BDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F805E0282861088A000B2BDC /* Assets.xcassets */; };
 		F805E02C2861088A000B2BDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F805E02A2861088A000B2BDC /* LaunchScreen.storyboard */; };
 		F805E034286108B6000B2BDC /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F805E033286108B6000B2BDC /* UIView+.swift */; };
-		F805E03C28620E7B000B2BDC /* UserNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F805E03B28620E7B000B2BDC /* UserNameTests.swift */; };
-		F805E0442862133F000B2BDC /* PasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F805E0432862133F000B2BDC /* PasswordTests.swift */; };
+		F805E0442862133F000B2BDC /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F805E0432862133F000B2BDC /* ValidatorTests.swift */; };
+		F805E04628635291000B2BDC /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F805E04528635291000B2BDC /* Validator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,8 @@
 		F805E02D2861088A000B2BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F805E033286108B6000B2BDC /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		F805E03928620E7B000B2BDC /* CreateUserTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CreateUserTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F805E03B28620E7B000B2BDC /* UserNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameTests.swift; sourceTree = "<group>"; };
-		F805E0432862133F000B2BDC /* PasswordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTests.swift; sourceTree = "<group>"; };
+		F805E0432862133F000B2BDC /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
+		F805E04528635291000B2BDC /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +85,7 @@
 				F805E01F28610888000B2BDC /* AppDelegate.swift */,
 				F805E02128610888000B2BDC /* SceneDelegate.swift */,
 				F805E033286108B6000B2BDC /* UIView+.swift */,
+				F805E04528635291000B2BDC /* Validator.swift */,
 				F805E02328610888000B2BDC /* ViewController.swift */,
 				F805E02528610888000B2BDC /* Main.storyboard */,
 				F805E0282861088A000B2BDC /* Assets.xcassets */,
@@ -97,8 +98,7 @@
 		F805E03A28620E7B000B2BDC /* CreateUserTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				F805E0432862133F000B2BDC /* PasswordTests.swift */,
-				F805E03B28620E7B000B2BDC /* UserNameTests.swift */,
+				F805E0432862133F000B2BDC /* ValidatorTests.swift */,
 			);
 			path = CreateUserTestTests;
 			sourceTree = "<group>";
@@ -206,6 +206,7 @@
 			files = (
 				F805E034286108B6000B2BDC /* UIView+.swift in Sources */,
 				F805E02428610888000B2BDC /* ViewController.swift in Sources */,
+				F805E04628635291000B2BDC /* Validator.swift in Sources */,
 				F805E02028610888000B2BDC /* AppDelegate.swift in Sources */,
 				F805E02228610888000B2BDC /* SceneDelegate.swift in Sources */,
 			);
@@ -215,8 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F805E0442862133F000B2BDC /* PasswordTests.swift in Sources */,
-				F805E03C28620E7B000B2BDC /* UserNameTests.swift in Sources */,
+				F805E0442862133F000B2BDC /* ValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 37H8X6K6NN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CreateUserTest/Info.plist;
@@ -383,7 +383,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AvantiApplications.CreateUserTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -398,7 +398,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 37H8X6K6NN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CreateUserTest/Info.plist;
@@ -411,7 +411,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AvantiApplications.CreateUserTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

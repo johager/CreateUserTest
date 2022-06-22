@@ -16,6 +16,10 @@ The build-2 commit was completed later, and includes:
 - unit tests to evaluate the username and passwrd "validators"
 - README file
 
+The build-3 commit has the following changes:
+- validation is moved to Validator to clean up the massive view controller and facilitate testing
+- unit testing is handled in a grouped fashion instead of a quick-and-dirty implementation
+
 ## Initial Problem Statement
 
 Create a new iPhone / iPad application to create users. The application can be written in Objective C or Swift or a mixture of both Objective C and Swift.
